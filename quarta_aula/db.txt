@@ -1,0 +1,8 @@
+gggg,Masculino,222.0,pp
+kkk,Masculino,555.0,jjj
+Alice,Feminino,30000.0,Medica
+Aline,Feminino,23000.0,advogada
+aaaa,Feminino,222.0,dsd
+Abraao,Masculino,25.22,teste
+flor,Feminino,222.22,vendas
+aaa,Feminino,2222.0,aaa
