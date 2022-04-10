@@ -1,8 +1,9 @@
-from PyQt5.QtWidgets import QMainWindow, QLabel, QVBoxLayout, QWidget, QLineEdit, QComboBox, QSpacerItem, QSizePolicy, QPushButton, QTableWidget, QTableWidgetItem
 from PyQt5.QtCore import QTimer
+from PyQt5.QtWidgets import QMainWindow, QLabel, QVBoxLayout, QWidget, QLineEdit, QComboBox, QSpacerItem, QSizePolicy, QPushButton, QTableWidget, QTableWidgetItem
+
 import estilo
-from models import Funcionario
 import utils
+from models import Funcionario
 
 
 class MainForm(QMainWindow):

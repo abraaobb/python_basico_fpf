@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtWidgets
 class Ui_Main(object):
     def setupUi(self, Main):
         Main.setObjectName("Main")
-        Main.resize(800, 600)
+        Main.resize(724, 655)
         Main.setStyleSheet("QWidget#painel_principal{\n"
                            "    background-color: #14213d\n"
                            "}\n"
@@ -64,6 +64,11 @@ class Ui_Main(object):
         self.componentes.setObjectName("componentes")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.componentes)
         self.verticalLayout.setObjectName("verticalLayout")
+        self.lbl_mensagem = QtWidgets.QLabel(self.componentes)
+        self.lbl_mensagem.setStyleSheet("color: green;")
+        self.lbl_mensagem.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_mensagem.setObjectName("lbl_mensagem")
+        self.verticalLayout.addWidget(self.lbl_mensagem)
         self.lbl_nome = QtWidgets.QLabel(self.componentes)
         self.lbl_nome.setObjectName("lbl_nome")
         self.verticalLayout.addWidget(self.lbl_nome)
@@ -112,8 +117,19 @@ class Ui_Main(object):
         self.btn_fechar.setObjectName("btn_fechar")
         self.horizontalLayout.addWidget(self.btn_fechar)
         self.verticalLayout_2.addWidget(self.botoes)
-        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem)
+        self.tbl_funcionarios = QtWidgets.QTableWidget(self.painel_principal)
+        self.tbl_funcionarios.setObjectName("tbl_funcionarios")
+        self.tbl_funcionarios.setColumnCount(4)
+        self.tbl_funcionarios.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tbl_funcionarios.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tbl_funcionarios.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tbl_funcionarios.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tbl_funcionarios.setHorizontalHeaderItem(3, item)
+        self.verticalLayout_2.addWidget(self.tbl_funcionarios)
         Main.setCentralWidget(self.painel_principal)
 
         self.retranslateUi(Main)
@@ -123,6 +139,7 @@ class Ui_Main(object):
         _translate = QtCore.QCoreApplication.translate
         Main.setWindowTitle(_translate("Main", "MainWindow"))
         self.lbl_titulo.setText(_translate("Main", "LISTAGEM E CADASTRO DE FUNCIONANÁRIOS"))
+        self.lbl_mensagem.setText(_translate("Main", "TextLabel"))
         self.lbl_nome.setText(_translate("Main", "Nome"))
         self.lbl_sexo.setText(_translate("Main", "Sexo"))
         self.cmb_sexo.setItemText(0, _translate("Main", "Masculino"))
@@ -131,3 +148,11 @@ class Ui_Main(object):
         self.lbl_departamento.setText(_translate("Main", "Departamento"))
         self.btn_salvar.setText(_translate("Main", "Salvar"))
         self.btn_fechar.setText(_translate("Main", "Fechar"))
+        item = self.tbl_funcionarios.horizontalHeaderItem(0)
+        item.setText(_translate("Main", "Nome"))
+        item = self.tbl_funcionarios.horizontalHeaderItem(1)
+        item.setText(_translate("Main", "Sexo"))
+        item = self.tbl_funcionarios.horizontalHeaderItem(2)
+        item.setText(_translate("Main", "Salário"))
+        item = self.tbl_funcionarios.horizontalHeaderItem(3)
+        item.setText(_translate("Main", "Departamento"))
